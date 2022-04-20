@@ -1,0 +1,32 @@
+html , body{
+    height: 100%;
+}
+
+.bg{
+    background-image: url(../img/bg.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.cardWeather{
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: #ffffff80;
+}
+
+.bodyWeather{
+    display: flex!important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
