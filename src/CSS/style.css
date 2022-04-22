@@ -52,8 +52,8 @@ html , body{
 }
 
 .glassCity{
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     background-color: #ffd00098;
 }
 .textInfo{
