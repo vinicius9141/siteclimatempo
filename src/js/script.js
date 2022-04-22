@@ -1,9 +1,5 @@
 key = "f9270f64211f76226c91307cf90a2b45";
 
-function teste (){
-    alert('O teste funcionou');
-}
-
 async function getCity(){
     cidade = document.getElementById("city").value.trim();
 
@@ -26,7 +22,11 @@ async function getWeather(){
     minWeather = Math.round(minWeather);
     maxWeather = Math.round(maxWeather);
     console.log(cityName)
+
    genHTML(actualWeather, minWeather, maxWeather, cityName);
+
+    document.getElementById('hideButton').style = `display: inline;`;
+
 
 }
 
