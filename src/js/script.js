@@ -18,14 +18,23 @@ async function getWeather(){
     let minWeather = request.data.main.temp_min - 273.15;
     let maxWeather = request.data.main.temp_max - 273.15;
     let cityName = request.data.name
+    let sensation = request.data.main.feels_like - 273.15
+    sensation = Math.round(sensation)
     actualWeather = Math.round(actualWeather);
     minWeather = Math.round(minWeather);
     maxWeather = Math.round(maxWeather);
-    console.log(cityName)
+
+    let icon = request.data.weather[0].icon
+    let iconIsert = document.getElementById('icon')
+    let skyCondition = request.data.weather[0].description
+
+    iconIsert.innerHTML=`<img src="../../src/icons/${icon}.png">  <p class="text-center textInfo" >${skyCondition}</p> <p class="text-center textInfo" >Sensação termica de: ${sensation}°C</p>`
+    
+
+    document.getElementById('hideButton').style = `display: inline;`;
 
    genHTML(actualWeather, minWeather, maxWeather, cityName);
 
-    document.getElementById('hideButton').style = `display: inline;`;
 
 
 }

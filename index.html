@@ -15,22 +15,27 @@
 
 
     <div class="main bg">
-        <div class="card cardWeather" style="width: 23rem; height: 30rem;">
-            <div class="card-body bodyWeather">
-              <h2 class="card-title fs-1 text-center" id="cityName">Digite sua cidade no campo abaixo</h2>
-              <p class="card-text fs-3" id="actualWeather">Aguardando...</p>
-              <p class="card-text fs-4 " id="minWeather"></p>
-              <p class="card-text fs-4" id="maxWeather"></p>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Sua cidade:</span><br>
+        <div class="card cardWeather">
+            <div class="card-body bodyWeather" id="WeatherDiv">
+
+              <div class="container-img d-flex flex-column headerWeather" id="icon">
+                <img src="./src/icons/unknown.png">
+              </div>
+
+              <h2 class="card-title  text-center text-black rounded-pill p-3 glassCity" id="cityName">Digite sua cidade no campo abaixo</h2>
+              <p class="card-text weatherText" id="actualWeather">Aguardando...</p>
+              <p class="card-text weatherText" id="minWeather"></p>
+              <p class="card-text weatherText" id="maxWeather"></p>
+              <div class="input-group mb-3 rounded-pill">
+                <span class="input-group-text" id="inputGroup-sizing-default">Sua cidade:</span>
                 <input  class="form-control" aria-label="Sizing example input" type="text" id="city"/>
                
               </div>
               <a href="#" class="btn btn-success btn-lg" onclick="getWeather()"> Pesquisar </a> <br>
-              <a href="./index.html" class="btn btn-warning btn-lg btnHide" id="hideButton"> Back to initial page </a>
             </div>
+          </div>
         </div>
-    </div>
+        <a href="./index.html" class="btn btn-sm btn-warning btn-lg btnHide" id="hideButton"> Back to initial page </a>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
